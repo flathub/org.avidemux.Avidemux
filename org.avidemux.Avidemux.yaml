@@ -5,6 +5,7 @@ runtime-version: 5.11
 sdk: org.kde.Sdk
 command: avidemux3_qt5
 finish-args:
+  - --socket=wayland
   - --share=ipc
   - --socket=x11
   - --device=dri
