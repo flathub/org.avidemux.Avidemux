@@ -64,20 +64,15 @@ modules:
       - bash bootStrap.bash --prefix=/app
       - cp -R install/app/* /app
       - install -Dm644 -t /app/share/icons/hicolor/256x256/apps org.avidemux.Avidemux.png
-      - desktop-file-edit --set-key=Name --set-value=Avidemux avidemux2.desktop
-      - desktop-file-edit --set-key=Exec --set-value=avidemux3_qt5 avidemux2.desktop
       - desktop-file-edit --set-key=Icon --set-value=org.avidemux.Avidemux avidemux2.desktop
       - install -Dm644 avidemux2.desktop /app/share/applications/org.avidemux.Avidemux.desktop
       - sed -i 's|<id>avidemux2.desktop</id>|<id>org.avidemux.Avidemux</id>|' avidemux2.appdata.xml
       - sed -i 's|<binary>avidemux2_gtk</binary>|<binary>avidemux3_qt5</binary>|' avidemux2.appdata.xml
-      - sed -i '30i <releases><release version=\"2.7.0\" date=\"2017-08-14\"/></releases>' avidemux2.appdata.xml
+      - sed -i '30i <releases><release version=\"2.7.1\" date=\"2018-06-04\"/></releases>' avidemux2.appdata.xml
       - install -Dm644 avidemux2.appdata.xml /app/share/metainfo/org.avidemux.Avidemux.appdata.xml
     sources:
       - type: file
         path: org.avidemux.Avidemux.png
       - type: archive
-        url: https://github.com/mean00/avidemux2/archive/2.7.0.tar.gz
-        sha256: b0941eea6d4bb17c16011fe41624c0117ff024ad6f66cab88673f761b90592c9
-      - type: patch
-        path: avidemux-qt5.11.patch
- 
+        url: https://github.com/mean00/avidemux2/archive/2.7.1.tar.gz
+        sha256: dfda3ad362e5b7191e9422315eda22ccd703a8d0d50106290143fefa8f88749e
