@@ -22,7 +22,7 @@ modules:
   - shared-modules/glu/glu-9.0.0.json
   - shared-modules/glew/glew.json
 
-  - name: yasm # need for bundled ffmpeg 3.3
+  - name: yasm
     buildsystem: cmake-ninja
     builddir: true
     cleanup:
@@ -59,18 +59,10 @@ modules:
     build-commands:
       - bash bootStrap.bash --prefix=/app
       - cp -R install/app/* /app
-      - install -Dm644 -t /app/share/icons/hicolor/128x128/apps org.avidemux.Avidemux.png
-      - desktop-file-edit --set-key=Icon --set-value=org.avidemux.Avidemux avidemux2.desktop
-      - install -Dm644 avidemux2.desktop /app/share/applications/org.avidemux.Avidemux.desktop
-      - sed -i 's|<id>avidemux2.desktop</id>|<id>org.avidemux.Avidemux</id>|' avidemux2.appdata.xml
-      - sed -i 's|<binary>avidemux2_gtk</binary>|<binary>avidemux3_qt5</binary>|' avidemux2.appdata.xml
-      - sed -i '30i <releases><release version=\"2.7.1\" date=\"2018-06-04\"/></releases>' avidemux2.appdata.xml
-      - install -Dm644 avidemux2.appdata.xml /app/share/metainfo/org.avidemux.Avidemux.appdata.xml
     sources:
-      - type: file
-        path: org.avidemux.Avidemux.png
       - type: archive
-        url: https://github.com/mean00/avidemux2/archive/2.7.1.tar.gz
-        sha256: dfda3ad362e5b7191e9422315eda22ccd703a8d0d50106290143fefa8f88749e
-      - type: patch
-        path: patches/Qt-GL-Fix-OpenGL-with-Qt-5.12.0.patch
+        url: https://github.com/mean00/avidemux2/archive/2.7.2.tar.gz
+        sha256: be8996cadd4ae9cb9ad9c06650e18ee212119522d70539784fe38a2625e72d4d
+      - type: shell
+        commands:
+          - sed -i 's/${BUILD_DATE}/2019-03-11/' avidemux/qt4/xdg_data/org.avidemux.Avidemux.appdata.xml.in
