@@ -22,7 +22,7 @@ modules:
   - shared-modules/glu/glu-9.0.0.json
   - shared-modules/glew/glew.json
 
-  - name: yasm
+  - name: yasm # avidemux still uses yasm
     buildsystem: cmake-ninja
     builddir: true
     cleanup:
@@ -61,8 +61,5 @@ modules:
       - cp -R install/app/* /app
     sources:
       - type: archive
-        url: https://github.com/mean00/avidemux2/archive/2.7.2.tar.gz
-        sha256: be8996cadd4ae9cb9ad9c06650e18ee212119522d70539784fe38a2625e72d4d
-      - type: shell
-        commands:
-          - sed -i 's/${BUILD_DATE}/2019-03-11/' avidemux/qt4/xdg_data/org.avidemux.Avidemux.appdata.xml.in
+        url: https://github.com/mean00/avidemux2/archive/2.7.3.tar.gz
+        sha256: aeb4275086577d7a37d6f62fded1fc3dd394f8b4f1a22d3bf64d0740639eba3c
