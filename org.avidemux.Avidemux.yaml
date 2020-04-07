@@ -5,9 +5,10 @@ runtime-version: '5.14'
 sdk: org.kde.Sdk
 command: avidemux3_qt5
 finish-args:
-  - --socket=wayland
   - --share=ipc
   - --socket=x11
+  - --socket=wayland
+  - --env=QT_QPA_PLATFORM=xcb
   - --device=dri
   - --socket=pulseaudio
   - --filesystem=host # needed for jobs scheduler
