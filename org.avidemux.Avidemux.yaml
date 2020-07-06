@@ -55,20 +55,19 @@ modules:
     subdir: source
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
-    cleanup:
-      - /bin
+      - -DENABLE_CLI=OFF
     sources:
       - type: archive
-        url: https://bitbucket.org/multicoreware/x265/downloads/x265_3.3.tar.gz
-        sha256: f26e148ed1f4dfb33fd1eb3ff5e60e08078d1b2017e88bcbb045b3fb58300b9c
+        url: https://bitbucket.org/multicoreware/x265/downloads/x265_3.4.tar.gz
+        sha256: c2047f23a6b729e5c70280d23223cb61b57bfe4ad4e8f1471eeee2a61d148672
 
   - name: avidemux
     buildsystem: simple
     build-commands:
       - bash bootStrap.bash --prefix=/app
       - cp -R install/app/* /app
-      - desktop-file-edit --set-key=Exec --set-value='avidemux3_qt5 %f' /app/share/applications/org.avidemux.Avidemux.desktop
     sources:
-      - type: archive
-        url: https://github.com/mean00/avidemux2/archive/2.7.4.tar.gz
-        sha256: 2cc0aa6a4ddd5b377bd2ec52c0b3586364c5a6793d149bda9d7ba6b704c84e2a
+      - type: git
+        url: https://github.com/mean00/avidemux2.git
+        commit: eb66519c78c7e9efdb67129f3b998cb9fae1217c
+        tag: '2.7.6'
