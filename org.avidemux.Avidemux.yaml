@@ -45,9 +45,9 @@ modules:
       - --disable-cli
       - --enable-shared
     sources:
-      - type: archive
-        url: https://code.videolan.org/videolan/x264/-/archive/1771b556ee45207f8711744ccbd5d42a3949b14c/x264-1771b556ee45207f8711744ccbd5d42a3949b14c.tar.bz2
-        sha256: b31c5db5337873b9ee42b8cbc60b56d60ce368fa7e4c4eff90a729b36eeb8326
+      - type: git
+        url: https://code.videolan.org/videolan/x264.git
+        commit: 544c61f082194728d0391fb280a6e138ba320a96
 
   - name: 'x265'
     buildsystem: cmake-ninja
@@ -69,5 +69,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/mean00/avidemux2.git
-        commit: eb66519c78c7e9efdb67129f3b998cb9fae1217c
-        tag: '2.7.6'
+        commit: 0298788c4872990215190e7351c7456f2801daa8
+        tag: '2.7.8'
