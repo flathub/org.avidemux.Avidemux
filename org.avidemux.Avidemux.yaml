@@ -1,7 +1,7 @@
 app-id: org.avidemux.Avidemux
 default-branch: stable
 runtime: org.kde.Platform
-runtime-version: '5.15'
+runtime-version: '5.15-21.08'
 sdk: org.kde.Sdk
 command: avidemux3_qt5
 finish-args:
@@ -67,7 +67,6 @@ modules:
       - bash bootStrap.bash --prefix=/app
       - cp -R install/app/* /app
     sources:
-      - type: git
-        url: https://github.com/mean00/avidemux2.git
-        commit: 0298788c4872990215190e7351c7456f2801daa8
-        tag: '2.7.8'
+      - type: archive
+        url: https://github.com/mean00/avidemux2/releases/download/2.8.0/avidemux_2.8.0.tar.gz
+        sha256: d1ec6f5277e51228ecf0ee1ca89fae24c591f520f87ce96fabec8818d04de33b
