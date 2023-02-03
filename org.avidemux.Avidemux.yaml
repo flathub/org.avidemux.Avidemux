@@ -68,5 +68,5 @@ modules:
       - cp -R install/app/* /app
     sources:
       - type: archive
-        url: https://github.com/mean00/avidemux2/releases/download/2.8.0/avidemux_2.8.0.tar.gz
-        sha256: d1ec6f5277e51228ecf0ee1ca89fae24c591f520f87ce96fabec8818d04de33b
+        url: https://github.com/mean00/avidemux2/releases/download/2.8.1/avidemux_2.8.1.tar.gz
+        sha256: 77d9bdca8683ce57c192b69d207cfab7cf92a7759ce0f63fa37b5c8e42ad3da2
