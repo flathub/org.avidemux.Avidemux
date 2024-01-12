@@ -63,7 +63,13 @@ modules:
     buildsystem: simple
     build-commands:
       - bash bootStrap.bash --prefix=/app
-      - cp -R install/app/* /app
+      - make -C buildCli install
+      - make -C buildCore install
+      - make -C buildPluginsCLI install
+      - make -C buildPluginsCommon install
+      - make -C buildQt5 install
+      - make -C buildPluginsQt5 install
+      - install -Dm644 man/avidemux.1 -t /app/share/man/man1
     sources:
       - type: archive
         url: https://github.com/mean00/avidemux2/releases/download/2.8.1/avidemux_2.8.1.tar.gz
