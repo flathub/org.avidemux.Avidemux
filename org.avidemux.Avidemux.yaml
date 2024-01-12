@@ -69,3 +69,5 @@ modules:
       - type: archive
         url: https://github.com/mean00/avidemux2/releases/download/2.8.1/avidemux_2.8.1.tar.gz
         sha256: 77d9bdca8683ce57c192b69d207cfab7cf92a7759ce0f63fa37b5c8e42ad3da2
+      - type: patch
+        path: patches/Dont-redirect-build-output.patch
