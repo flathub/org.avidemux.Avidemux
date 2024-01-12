@@ -6,8 +6,6 @@ command: avidemux3_qt5
 finish-args:
   - --share=ipc
   - --socket=x11
-  - --socket=wayland
-  - --env=QT_QPA_PLATFORM=xcb
   - --device=dri
   - --socket=pulseaudio
   - --filesystem=host # needed for jobs scheduler
