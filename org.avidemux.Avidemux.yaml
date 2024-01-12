@@ -11,7 +11,6 @@ finish-args:
   - --device=dri
   - --socket=pulseaudio
   - --filesystem=host # needed for jobs scheduler
-  - --env=LD_LIBRARY_PATH=/app/lib/x86_64-linux-gnu/:/app/lib/i386-linux-gnu/:/app/lib64:/app/lib
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -73,3 +72,5 @@ modules:
         path: patches/Dont-redirect-build-output.patch
       - type: patch
         path: patches/libavcodec-clip-constants.patch
+      - type: patch
+        path: patches/Force-libdir-location.patch

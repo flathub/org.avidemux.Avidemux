@@ -1,0 +1,13 @@
+diff --git a/cmake/admInstallDir.cmake b/cmake/admInstallDir.cmake
+index 34f29c7..cb9d117 100644
+--- a/cmake/admInstallDir.cmake
++++ b/cmake/admInstallDir.cmake
+@@ -17,7 +17,7 @@ ELSE(WIN32)
+         ENDIF(NOT AVIDEMUX_INSTALL_DIR )
+         SET(AVIDEMUX_BIN_DIR ${AVIDEMUX_INSTALL_DIR}/bin)
+         IF(CMAKE_C_IMPLICIT_LINK_DIRECTORIES MATCHES "\\/lib64([; ]|$)")
+-                SET(AVIDEMUX_RELATIVE_LIB_DIR lib64)
++                SET(AVIDEMUX_RELATIVE_LIB_DIR lib)
+         ELSEIF(CMAKE_C_IMPLICIT_LINK_DIRECTORIES MATCHES "\\/lib32([; ]|$)")
+                 SET(AVIDEMUX_RELATIVE_LIB_DIR lib32)
+         ELSE(CMAKE_C_IMPLICIT_LINK_DIRECTORIES MATCHES "\\/lib64([; ]|$)")
