@@ -78,3 +78,5 @@ modules:
         path: patches/libavcodec-clip-constants.patch
       - type: patch
         path: patches/Force-libdir-location.patch
+      - type: patch
+        path: patches/Fix-issues-with-appstreamcli-validation.patch
