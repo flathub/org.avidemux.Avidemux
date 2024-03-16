@@ -80,3 +80,5 @@ modules:
         path: patches/Force-libdir-location.patch
       - type: patch
         path: patches/Fix-issues-with-appstreamcli-validation.patch
+      - type: patch
+        path: patches/Dont-manually-add-extension-when-saving-file.patch

@@ -1,0 +1,21 @@
+diff --git a/avidemux/qt4/ADM_userInterfaces/ADM_gui/file_qt4_old.cpp b/avidemux/qt4/ADM_userInterfaces/ADM_gui/file_qt4.cpp
+index b5a5c79..819029b 100644
+--- a/avidemux/qt4/ADM_userInterfaces/ADM_gui/file_qt4_old.cpp
++++ b/avidemux/qt4/ADM_userInterfaces/ADM_gui/file_qt4.cpp
+@@ -142,16 +142,6 @@ static int fileSelWriteInternal(const char *label, char *target, uint32_t max, c
+     int len = strlen(fileName.toUtf8().constData());
+     if(!len || len >= max) return 0;
+ 
+-    // Check if we need to add an extension....
+-    if(doFilter)
+-    {                     
+-        if(!strstr(fileName.toUtf8().constData(),".")) //FIXME
+-        {
+-            fileName=fileName+QString(".")+QString(ext);
+-            len+=extSize;
+-        }
+-    }
+-
+     if(opts & QFileDialog::DontConfirmOverwrite)
+     {
+         QFile newFile(fileName);
