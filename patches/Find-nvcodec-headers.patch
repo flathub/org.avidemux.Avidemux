@@ -1,0 +1,13 @@
+diff --git a/cmake/admCheckNvEnc.cmake b/cmake/admCheckNvEnc.cmake
+index 94f9adb..66ad69d 100644
+--- a/cmake/admCheckNvEnc.cmake
++++ b/cmake/admCheckNvEnc.cmake
+@@ -9,7 +9,7 @@ MACRO(checkNvEnc)
+             PKG_CHECK_MODULES(FFNVENC ffnvcodec)
+             IF (FFNVENC_FOUND)
+                 FIND_PATH(NVENC_INCLUDE_DIR nvEncodeAPI.h
+-                        PATHS /usr/local/include/ffnvcodec /usr/include/ffnvcodec /include/ffnvcodec ${FFNVENC_CFLAGS} ${CROSS}/include)
++                        PATHS /usr/local/include/ffnvcodec /usr/include/ffnvcodec /include/ffnvcodec /app/include/ffnvcodec ${FFNVENC_CFLAGS} ${CROSS}/include)
+                 IF (NVENC_INCLUDE_DIR)
+                     MESSAGE(STATUS "NVENC header found in ${NVENC_INCLUDE_DIR}")
+                     SET(USE_NVENC True)
