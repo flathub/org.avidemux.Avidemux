@@ -76,8 +76,6 @@ modules:
           type: anitya
           project-id: 7275
           url-template: https://bitbucket.org/multicoreware/x265_git/downloads/x265_$version.tar.gz
-      - type: patch
-        path: patches/x265-cmake-fix.patch # https://bitbucket.org/multicoreware/x265_git/commits/51ae8e922bcc4586ad4710812072289af91492a8
 
   - name: ffnvcodec
     no-autogen: true
