@@ -84,8 +84,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/FFmpeg/nv-codec-headers.git
-        commit: 43d91706e097565f57b311e567f0219838bcc2f6
-        tag: n11.1.5.3
+        commit: 85f332a190555b56a1d5d4c070a076c871c0dcea
+        tag: n11.1.5.4
         x-checker-data:
           type: git
           tag-pattern: ^n([\d.]+)$
